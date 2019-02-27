@@ -25,9 +25,10 @@
 </HTML> 
 <?php
 if($_GET['Artikelnummer'] != NULL && $_GET['Intern'] != NULL && $_GET['Beschreibung'] != NULL && $_GET['Bestand'] != NULL && $_GET['Lagerort'] != NULL){
+	require_once 'dbconfig.php';
 	$servername = "localhost";
 	$username = "root";
-	$password = "";
+	$password = $pass;
 	$dbname = "lager";
 
 	try {

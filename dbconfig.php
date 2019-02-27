@@ -14,3 +14,6 @@
 		
 		die($ex->getMessage());
 	}
+	
+	$pass = "";
+?>
