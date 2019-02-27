@@ -20,11 +20,11 @@
 				</tr>
 				<tr>
 					<form action="lager.php" method="get">
-						<th><input name="Artikelnummer" type="number" class="form-control" placeholder="" value="<?php echo htmlspecialchars($_GET['Artikelnummer']); ?>"></th>
-						<th><input name="Beschreibung" type="text" class="form-control" placeholder="" value="<?php echo htmlspecialchars($_GET['Beschreibung']); ?>"></th>
-						<th><input name="Intern" type="text" class="form-control" placeholder="" value="<?php echo htmlspecialchars($_GET['Intern']); ?>"></th>
-						<th><input name="Bestand" type="number" class="form-control" placeholder="" value="<?php echo htmlspecialchars($_GET['Bestand']); ?>"></th>
-						<th><input name="Lagerort" type="text" class="form-control" placeholder="" value="<?php echo htmlspecialchars($_GET['Lagerort']); ?>"></th>
+						<th><input name="Artikelnummer" type="number" class="form-control" placeholder="1,2,3,..." value="<?php echo htmlspecialchars($_GET['Artikelnummer']); ?>"></th>
+						<th><input name="Beschreibung" type="text" class="form-control" placeholder="Text auf der Packung" value="<?php echo htmlspecialchars($_GET['Beschreibung']); ?>"></th>
+						<th><input name="Intern" type="text" class="form-control" placeholder="Schlagwörter" value="<?php echo htmlspecialchars($_GET['Intern']); ?>"></th>
+						<th><input name="Bestand" type="number" class="form-control" placeholder="Menge z.B. 1,2,3,..." value="<?php echo htmlspecialchars($_GET['Bestand']); ?>"></th>
+						<th><input name="Lagerort" type="text" class="form-control" placeholder="1-1-1, 5-42-23,..." value="<?php echo htmlspecialchars($_GET['Lagerort']); ?>"></th>
 						<input type="hidden" name="neuerBestand" type="text" class="form-control" placeholder="" value="">
 						<input type="hidden" name="artikel" type="text" class="form-control" placeholder="" value="">
 						<input type="hidden" name="add" type="text" class="form-control" placeholder="" value="">
