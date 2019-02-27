@@ -35,7 +35,7 @@ if($_GET['Artikelnummer'] != NULL && $_GET['Intern'] != NULL && $_GET['Beschreib
 		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		// set the PDO error mode to exception
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "INSERT INTO users (Artikelnummer, beschreibung, internebezeichnung, bestand, lagerort) VALUES ('".$_GET['Artikelnummer']."', '".$_GET['Beschreibung']."', '".$_GET['Intern']."', '".$_GET['Bestand']."', '".$_GET['Lagerort']."')";
+		$sql = "INSERT INTO artikel (Artikelnummer, beschreibung, internebezeichnung, bestand, lagerort) VALUES ('".$_GET['Artikelnummer']."', '".$_GET['Beschreibung']."', '".$_GET['Intern']."', '".$_GET['Bestand']."', '".$_GET['Lagerort']."')";
 		// use exec() because no results are returned
 		$conn->exec($sql);
 		echo "New record created successfully";

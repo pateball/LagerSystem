@@ -37,7 +37,7 @@
 					//Filter für die Beschreibung
 					if($_GET['Beschreibung'] != NULL){
 						require_once 'dbconfig.php';
-						$query = "SELECT * FROM users WHERE Beschreibung LIKE '%".$_GET['Beschreibung']."%' ORDER BY Artikelnummer";
+						$query = "SELECT * FROM artikel WHERE Beschreibung LIKE '%".$_GET['Beschreibung']."%' ORDER BY Artikelnummer";
 						$stmt = $DBcon->prepare( $query );
 						$stmt->execute();
 						while ($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -60,7 +60,7 @@
 					//Filter für die Artikelnummer
 					if($_GET['Artikelnummer'] != NULL){
 						require_once 'dbconfig.php';
-						$query = "SELECT * FROM users WHERE Artikelnummer = '".$_GET['Artikelnummer']."' ORDER BY Artikelnummer";
+						$query = "SELECT * FROM artikel WHERE Artikelnummer = '".$_GET['Artikelnummer']."' ORDER BY Artikelnummer";
 						$stmt = $DBcon->prepare( $query );
 						$stmt->execute();
 						while ($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -83,7 +83,7 @@
 					//Filter für die Inter Bezeichnung
 					if($_GET['Intern'] != NULL){
 						require_once 'dbconfig.php';
-						$query = "SELECT * FROM users WHERE internebezeichnung LIKE '%".$_GET['Intern']."%' ORDER BY Artikelnummer";
+						$query = "SELECT * FROM artikel WHERE internebezeichnung LIKE '%".$_GET['Intern']."%' ORDER BY Artikelnummer";
 						$stmt = $DBcon->prepare( $query );
 						$stmt->execute();
 						while ($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -106,7 +106,7 @@
 					//Filter für den Bestand
 					if($_GET['Bestand'] != NULL){
 						require_once 'dbconfig.php';
-						$query = "SELECT * FROM users WHERE bestand = '".$_GET['Bestand']."' ORDER BY Artikelnummer";
+						$query = "SELECT * FROM artikel WHERE bestand = '".$_GET['Bestand']."' ORDER BY Artikelnummer";
 						$stmt = $DBcon->prepare( $query );
 						$stmt->execute();
 						while ($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -129,7 +129,7 @@
 					//Filter für den Lagerort
 					if($_GET['Lagerort'] != NULL){
 						require_once 'dbconfig.php';
-						$query = "SELECT * FROM users WHERE lagerort = '".$_GET['Lagerort']."' ORDER BY Artikelnummer";
+						$query = "SELECT * FROM artikel WHERE lagerort = '".$_GET['Lagerort']."' ORDER BY Artikelnummer";
 						$stmt = $DBcon->prepare( $query );
 						$stmt->execute();
 						while ($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -152,7 +152,7 @@
 					//fals kein eintrag vorhanden ist
 					if($_GET['Artikelnummer'] == NULL && $_GET['Intern'] == NULL && $_GET['Beschreibung'] == NULL && $_GET['Bestand'] == NULL && $_GET['Lagerort'] == NULL){
 						require_once 'dbconfig.php';
-						$query = "SELECT * FROM users ORDER BY Artikelnummer";
+						$query = "SELECT * FROM artikel ORDER BY Artikelnummer";
 						$stmt = $DBcon->prepare( $query );
 						$stmt->execute();
 						while ($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -186,7 +186,7 @@
 						$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 						// set the PDO error mode to exception
 						$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-					$sql = "UPDATE users SET bestand='".$neuerSqlBestand."' WHERE Artikelnummer=".$_GET['artikel'];
+					$sql = "UPDATE artikel SET bestand='".$neuerSqlBestand."' WHERE Artikelnummer=".$_GET['artikel'];
 						// use exec() because no results are returned
 						$conn->exec($sql);
 						echo "Erfolgreich geändert";
@@ -211,7 +211,7 @@
 						$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 						// set the PDO error mode to exception
 						$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-					$sql = "UPDATE users SET bestand='".$neuerSqlBestand."' WHERE Artikelnummer=".$_GET['artikel'];
+					$sql = "UPDATE artikel SET bestand='".$neuerSqlBestand."' WHERE Artikelnummer=".$_GET['artikel'];
 						// use exec() because no results are returned
 						$conn->exec($sql);
 						echo "Erfolgreich geändert";

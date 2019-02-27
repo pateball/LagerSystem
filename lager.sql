@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 26. Feb 2019 um 19:27
+-- Erstellungszeit: 27. Feb 2019 um 14:49
 -- Server-Version: 10.1.36-MariaDB
 -- PHP-Version: 7.2.11
 
@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `users`
+-- Tabellenstruktur für Tabelle `artikel`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `artikel` (
   `Id` int(11) NOT NULL,
   `Artikelnummer` int(11) NOT NULL,
   `beschreibung` varchar(30) NOT NULL,
@@ -39,24 +39,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Daten für Tabelle `users`
---
-
-INSERT INTO `users` (`Id`, `Artikelnummer`, `beschreibung`, `internebezeichnung`, `bestand`, `lagerort`, `seit`) VALUES
-(1, 1, 'Text auf der Packung', 'Schlagwoerter', 9, '1-1-1', '2019-02-24 19:37:28'),
-(2, 2, 'Zweiter Artikel', 'Auch ein Test', 2, '1-10-20', '2019-02-25 11:56:37'),
-(3, 5, 'fuenfter Artikel', 'Immernoch ein test', 6, '18-6-1', '2019-02-25 14:17:10'),
-(4, 30, 'zwei an einem Ort', 'Doppel Test', 6, '1-1-1\r\n', '2019-02-25 15:29:13'),
-(5, 20, 'neu', 'Test des artikel Anlegens', 2, '18-05-00', '2019-02-25 18:46:15');
-
---
 -- Indizes der exportierten Tabellen
 --
 
 --
--- Indizes für die Tabelle `users`
+-- Indizes für die Tabelle `artikel`
 --
-ALTER TABLE `users`
+ALTER TABLE `artikel`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -64,10 +53,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT für Tabelle `users`
+-- AUTO_INCREMENT für Tabelle `artikel`
 --
-ALTER TABLE `users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `artikel`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
