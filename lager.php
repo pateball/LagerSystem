@@ -149,7 +149,7 @@
 					}
 				?>
 				<?php
-					//fals kein eintrag vorhanden ist
+					//falls kein Eintrag vorhanden ist
 					if($_GET['Artikelnummer'] == NULL && $_GET['Intern'] == NULL && $_GET['Beschreibung'] == NULL && $_GET['Bestand'] == NULL && $_GET['Lagerort'] == NULL){
 						require_once 'dbconfig.php';
 						$query = "SELECT * FROM artikel ORDER BY Artikelnummer";
