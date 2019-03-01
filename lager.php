@@ -163,7 +163,7 @@
 					<td><?php echo $row['beschreibung']; ?></td>
 					<td><?php echo $row['internebezeichnung']; ?></td>
 					<td><?php echo $row['bestand'] ?><div class="text-right"><a href="<?php echo "Lager.php?Artikelnummer=&Beschreibung=&Intern=&Bestand=&Lagerort=&neuerBestand=".$row['bestand']."&artikel=".$row['Artikelnummer']."&add=1"; ?>"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a><a href="<?php echo "Lager.php?Artikelnummer=&Beschreibung=&Intern=&Bestand=&Lagerort=&neuerBestand=".$row['bestand']."&artikel=".$row['Artikelnummer']."&add=2"; ?>"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a></div></td>
-					<td><?php echo $row['lagerort'] ?><div class="text-right"><a href="#"><button type="button" class="btn btn-danger text-right"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></div></td>	
+					<td><?php echo $row['lagerort'] ?><!--<div class="text-right"><a href="#"><button type="button" class="btn btn-danger text-right"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></div>--></td>	
 				</tr>
 					<?php }} ?>
 			</table>
