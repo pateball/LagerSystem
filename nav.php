@@ -20,7 +20,7 @@
     <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li <?php //echo $lager; ?> ><a href="Lager.php?Artikelnummer=&Beschreibung=&Intern=&Bestand=&Lagerort=&neuerBestand=&artikel=&add=">Lager <span class="sr-only">(aktuell)</span></a></li>
+        <li <?php //echo $lager; ?> ><a href="lager.php?Artikelnummer=&Beschreibung=&Intern=&Bestand=&Lagerort=&neuerBestand=&artikel=&add=">Lager <span class="sr-only">(aktuell)</span></a></li>
 		<li <?php //echo $neuerArtikel; ?> ><a href="new.php?Artikelnummer=&Beschreibung=&Intern=&Bestand=&Lagerort=">Neuer Artikel</a></li>
       </ul>
       <form class="navbar-form navbar-left" role="search">
