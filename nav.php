@@ -1,7 +1,7 @@
 ﻿
 
 <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css"  />
-	
+<link href="icon.ico" rel="shortcut icon"></link>	
 	
 	
 <nav class="navbar navbar-default navbar-fixed-top">
