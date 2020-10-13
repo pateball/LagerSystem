@@ -197,8 +197,8 @@
 							extract($row);
 				?>   
 				<tr>
-					<td><?php echo $row['Artikelnummer']; ?></td>
-					<td><?php echo $row['beschreibung']; ?></td>
+					<td><a href="artikelseite.php?artikel=<?php echo $row['Id']; ?>"><?php echo $row['Artikelnummer']; ?></a></td>
+					<td><a href="artikelseite.php?artikel=<?php echo $row['Id']; ?>"><?php echo $row['beschreibung']; ?></a></td>
 					<td><?php echo $row['internebezeichnung']; ?></td>
 					<td><?php echo $row['bestand'] ?>
 						<div class="text-right">
@@ -210,7 +210,7 @@
 							</a>
 						</div>
 					</td>
-					<td><?php echo $row['lagerort'] ?>
+					<td><a href="lager.php?Artikelnummer=&Beschreibung=&Intern=&Bestand=&Lagerort=<?php echo $row['lagerort']; ?>&neuerBestand=&artikel=&add="><?php echo $row['lagerort'] ?></a>
 						<!--<div class="text-right">
 							<a href="#">
 								<button type="button" class="btn btn-danger text-right">
