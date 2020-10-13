@@ -5,13 +5,19 @@
 	<?php 
 	$neuerArtikel = 'class="active"';
 	include ("nav.php");
+	require_once 'dbconfig.php';
+	$query = "SELECT MAX(Artikelnummer) FROM artikel";
+	$stmt = $DBcon->prepare( $query );
+	$stmt->execute();
+	while ($row=$stmt->fetch(PDO::FETCH_ASSOC) ) {
+		extract($row);	
 	?>
 	<body><br><br><br><br>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-offset-1 col-md-10">
 					<form action="new.php" method="get">
-						<H4>Artikelnummer:</H4><input name="Artikelnummer" type="number" class="form-control" placeholder="" value="" required>
+						<H4>Artikelnummer:</H4><input name="Artikelnummer" type="number" class="form-control" placeholder="" value="<?php echo $row['MAX(Artikelnummer)']+1;?>" required>
 						<h4>Beschreibung</h4><input name="Beschreibung" type="text" class="form-control" placeholder="" value="" required>
 						<h4>Intere Bezeichnung</h4><input name="Intern" type="text" class="form-control" placeholder="" value="" required>
 						<h4>Bestand</h4><input name="Bestand" type="number" class="form-control" placeholder="" value="" required>
@@ -48,5 +54,6 @@ if($_GET['Artikelnummer'] != NULL && $_GET['Intern'] != NULL && $_GET['Beschreib
 		}
 
 	$conn = null;
+}
 }
 ?> 
