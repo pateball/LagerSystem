@@ -1,9 +1,17 @@
 <?php
+	//Edit this
 	
-	$DBhost = "localhost";
-	$DBuser = "root";
-	$DBpass = "";
-	$DBname = "lager";
+	$host = "localhost";
+	$user = "lager";
+	$pass = "";
+	$name = "lager";
+	
+	//do not edit this
+	
+	$DBhost = $host;
+	$DBuser = $user;
+	$DBpass = $pass;
+	$DBname = $name;
 	
 	try{
 		
@@ -15,5 +23,5 @@
 		die($ex->getMessage());
 	}
 	
-	$pass = "";
+	
 ?>

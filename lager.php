@@ -33,8 +33,7 @@
 				</tr>
             
             
-				<?php
-					//Filter für die Beschreibung
+				<?php //Filter für die Beschreibung					
 					if($_GET['Beschreibung'] != NULL){
 						require_once 'dbconfig.php';
 						$query = "SELECT * FROM artikel WHERE Beschreibung LIKE '%".$_GET['Beschreibung']."%' ORDER BY Artikelnummer";
@@ -64,8 +63,7 @@
 						}
 					}
 				?>
-				<?php
-					//Filter für die Artikelnummer
+				<?php //Filter für die Artikelnummer
 					if($_GET['Artikelnummer'] != NULL){
 						require_once 'dbconfig.php';
 						$query = "SELECT * FROM artikel WHERE Artikelnummer = '".$_GET['Artikelnummer']."' ORDER BY Artikelnummer";
@@ -96,8 +94,7 @@
 						}
 					}
 				?>
-				<?php
-					//Filter für die Inter Bezeichnung
+				<?php //Filter für die Inter Bezeichnung
 					if($_GET['Intern'] != NULL){
 						require_once 'dbconfig.php';
 						$query = "SELECT * FROM artikel WHERE internebezeichnung LIKE '%".$_GET['Intern']."%' ORDER BY Artikelnummer";
@@ -128,8 +125,7 @@
 						}
 					}
 				?>
-				<?php
-					//Filter für den Bestand
+				<?php //Filter für den Bestand
 					if($_GET['Bestand'] != NULL){
 						require_once 'dbconfig.php';
 						$query = "SELECT * FROM artikel WHERE bestand = '".$_GET['Bestand']."' ORDER BY Artikelnummer";
@@ -160,8 +156,7 @@
 						}
 					}
 				?>
-				<?php
-					//Filter für den Lagerort
+				<?php //Filter für den Lagerort
 					if($_GET['Lagerort'] != NULL){
 						require_once 'dbconfig.php';
 						$query = "SELECT * FROM artikel WHERE lagerort = '".$_GET['Lagerort']."' ORDER BY Artikelnummer";
@@ -192,8 +187,7 @@
 						}
 					}
 				?>
-				<?php
-					//falls kein Eintrag vorhanden ist
+				<?php //falls kein Eintrag vorhanden ist
 					if($_GET['Artikelnummer'] == NULL && $_GET['Intern'] == NULL && $_GET['Beschreibung'] == NULL && $_GET['Bestand'] == NULL && $_GET['Lagerort'] == NULL){
 						require_once 'dbconfig.php';
 						$query = "SELECT * FROM artikel ORDER BY Artikelnummer";
@@ -228,7 +222,7 @@
 				</tr>
 					<?php }} ?>
 			</table>
-			<?php
+			<?php //Bestand erhöhen/senken
 				if($_GET['add'] == "1"){
 					echo $_GET['artikel']."<br>";
 					echo $_GET['add']."<br>";				
@@ -238,10 +232,10 @@
 					
 					$neuerSqlBestand = $_GET['neuerBestand'] + "1";
 					
-					$servername = "localhost";
-					$username = "root";
+					$servername = $host;
+					$username = $user;
 					$password = $pass;
-					$dbname = "lager";
+					$dbname = $name;
 
 					try {
 						$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -263,10 +257,10 @@
 					
 					$neuerSqlBestand = $_GET['neuerBestand'] -= "1";
 					
-					$servername = "localhost";
-					$username = "root";
+					$servername = $host;
+					$username = $user;
 					$password = $pass;
-					$dbname = "lager";
+					$dbname = $name;
 
 					try {
 						$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

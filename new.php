@@ -26,10 +26,10 @@
 <?php
 if($_GET['Artikelnummer'] != NULL && $_GET['Intern'] != NULL && $_GET['Beschreibung'] != NULL && $_GET['Bestand'] != NULL && $_GET['Lagerort'] != NULL){
 	require_once 'dbconfig.php';
-	$servername = "localhost";
-	$username = "root";
+	$servername = $host;
+	$username = $user;
 	$password = $pass;
-	$dbname = "lager";
+	$dbname = $name;
 
 	try {
 		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
