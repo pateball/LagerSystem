@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< Updated upstream
 -- Erstellungszeit: 13. Okt 2020 um 23:11
+=======
+-- Erstellungszeit: 15. Okt 2020 um 14:08
+>>>>>>> Stashed changes
 -- Server-Version: 10.4.14-MariaDB
 -- PHP-Version: 7.4.10
 
@@ -34,6 +38,10 @@ CREATE TABLE `artikel` (
   `internebezeichnung` varchar(60) NOT NULL,
   `bestand` int(11) NOT NULL,
   `meldebestand` int(11) NOT NULL,
+<<<<<<< Updated upstream
+=======
+  `SAPsperre` int(11) NOT NULL COMMENT '0 = keine Sperre\r\n1 = Sperre',
+>>>>>>> Stashed changes
   `lagerort` varchar(255) NOT NULL,
   `seit` timestamp NOT NULL DEFAULT current_timestamp(),
   `bild` varchar(255) NOT NULL,

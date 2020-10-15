@@ -2,7 +2,11 @@
 	<head>
 		<title>artikelsuche</title>
 	</head>
+<<<<<<< Updated upstream
 	<?php include ("nav.php"); ?>
+=======
+	<?php include ("nav.php"); ?>		
+>>>>>>> Stashed changes
 	<body>
 	<?php
 	require_once 'dbconfig.php';
@@ -16,6 +20,10 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-offset-2 col-md-8">
+<<<<<<< Updated upstream
+=======
+					<a class="btn btn-default" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" role="button">Back</a>
+>>>>>>> Stashed changes
 					<div class="panel panel-default">
 						<div class="panel-heading"><h4>Artikel Stammdaten</h4></div>
 						<div class="panel-body">
@@ -28,6 +36,22 @@
 								<span class="input-group-addon" id="einfaches-addon1">Beschreibung</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['beschreibung']; ?>" aria-describedby="einfaches-addon1">
 							</div>
+<<<<<<< Updated upstream
+=======
+							<div class="ud_box">
+								<form id="ud_form">
+									<div class="checkbox">
+										<label>
+											<input name="SAP" type="checkbox" <?php if($row['SAPsperre'] == 1){echo "checked";} ?>>
+												SAP Sperre
+										</label>
+										<input name="Id" type="hidden" value="<?php echo $row['Id']; ?>" required>
+										<input class="btn btn-default" type="submit" value="Aktualisieren">
+									</div>
+									<div class="ud_box" id="ud_output"></div>
+								</form>
+							</div>
+>>>>>>> Stashed changes
 						</div>
 					</div>
 				</div>
@@ -178,4 +202,21 @@
 		</div>
 		<?php } ?>
 	</body>
+<<<<<<< Updated upstream
+=======
+	<script>
+		$('#ud_form').submit(function(event){
+			event.preventDefault();
+			$.ajax({
+				type: 'GET',
+				url: 'artikelseite_inserte.php',
+				data: $(this).serialize(),
+				success: function(data){
+					$('#ud_output').html(data);
+				}
+			});
+			//$('#ud_form')[0].reset();
+		});
+	</script>
+>>>>>>> Stashed changes
 </HTML>
