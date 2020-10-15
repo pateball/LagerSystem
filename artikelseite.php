@@ -113,7 +113,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="panel panel-default">
-						<div class="panel-heading"><h4>Bild</h4></div>
+						<div class="panel-heading"><h4>Produkt Bild</h4></div>
 						<div class="panel-body">
 							 <a href="bilder/<?php echo $row['Artikelnummer']; ?>.gif"><img src="bilder/<?php echo $row['Artikelnummer']; ?>.gif" alt="kein Bild vorhanden" width="100%" height="auto" ></a>
 
