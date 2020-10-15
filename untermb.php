@@ -44,7 +44,7 @@
 							<tr>
 								<td><a href="artikelseite.php?artikel=<?php echo $row['Id']; ?>"><?php echo $row['Artikelnummer']; ?></a></td>
 								<td><a href="artikelseite.php?artikel=<?php echo $row['Id']; ?>"><?php echo $row['beschreibung']; ?></a></td>
-								<td><?php echo $row['internebezeichnung']; ?></td>
+								<td><a href="artikelseite.php?artikel=<?php echo $row['Id']; ?>"><?php echo $row['internebezeichnung']; ?></a></td>
 								<td><?php echo $row['bestand'] ?>					</td>
 								<td><?php echo $row['meldebestand']; ?></td>
 								<td><a href="lager.php?Artikelnummer=&Beschreibung=&Intern=&Bestand=&Lagerort=<?php echo $row['lagerort']; ?>&neuerBestand=&artikel=&add="><?php echo $row['lagerort'] ?></a></td>	

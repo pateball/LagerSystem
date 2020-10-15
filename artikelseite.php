@@ -2,11 +2,8 @@
 	<head>
 		<title>artikelsuche</title>
 	</head>
-<<<<<<< Updated upstream
 	<?php include ("nav.php"); ?>
-=======
-	<?php include ("nav.php"); ?>		
->>>>>>> Stashed changes
+	<?php include ("nav.php"); ?>	
 	<body>
 	<?php
 	require_once 'dbconfig.php';
@@ -20,10 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-offset-2 col-md-8">
-<<<<<<< Updated upstream
-=======
 					<a class="btn btn-default" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" role="button">Back</a>
->>>>>>> Stashed changes
 					<div class="panel panel-default">
 						<div class="panel-heading"><h4>Artikel Stammdaten</h4></div>
 						<div class="panel-body">
@@ -36,8 +30,6 @@
 								<span class="input-group-addon" id="einfaches-addon1">Beschreibung</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['beschreibung']; ?>" aria-describedby="einfaches-addon1">
 							</div>
-<<<<<<< Updated upstream
-=======
 							<div class="ud_box">
 								<form id="ud_form">
 									<div class="checkbox">
@@ -51,7 +43,6 @@
 									<div class="ud_box" id="ud_output"></div>
 								</form>
 							</div>
->>>>>>> Stashed changes
 						</div>
 					</div>
 				</div>
@@ -112,6 +103,10 @@
 							<div class="input-group">
 								<span class="input-group-addon" id="einfaches-addon1">Preis</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['preis']; ?>" aria-describedby="einfaches-addon1">
+							</div>
+							<div class="input-group">
+								<span class="input-group-addon" id="einfaches-addon1">Einheit</span>
+								<input type="text" class="form-control" disabled value="<?php echo $row['einheit']; ?>" aria-describedby="einfaches-addon1">
 							</div>
 						</div>
 					</div>
@@ -202,8 +197,6 @@
 		</div>
 		<?php } ?>
 	</body>
-<<<<<<< Updated upstream
-=======
 	<script>
 		$('#ud_form').submit(function(event){
 			event.preventDefault();
@@ -218,5 +211,4 @@
 			//$('#ud_form')[0].reset();
 		});
 	</script>
->>>>>>> Stashed changes
 </HTML>
