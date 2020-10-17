@@ -36,7 +36,7 @@
 
 $suchmuster = array();
 $suchmuster[0] = '/"/';
-$suchmuster[1] = '//';
+$suchmuster[1] = '/§/';
 $suchmuster[2] = '/$/';
 $suchmuster[3] = '/%/';
 $suchmuster[4] = '/&/';
@@ -45,7 +45,7 @@ $suchmuster[6] = '/(/';
 $suchmuster[7] = '/)/';
 $suchmuster[8] = '/=/';
 $suchmuster[9] = '/?/';
-$suchmuster[10] = '/?/';
+$suchmuster[10] = '/ß/';
 $suchmuster[11] = '/{/';
 $suchmuster[12] = '/}/';
 $suchmuster[13] = '/[/';
@@ -101,10 +101,15 @@ if($_GET['Artikelnummer'] != NULL && $_GET['Intern'] != NULL && $_GET['Beschreib
 	$dbname = $name;
 
 	try {
+		$newBeschreibung = preg_replace($suchmuster,$ersetzung,$_GET['Beschreibung']);
+		$newIntern = preg_replace($suchmuster,$ersetzung,$_GET['Intern']);
+		$newLagerort = preg_replace($suchmuster,$ersetzung,$_GET['Lagerort']);
+		$newEinheit = preg_replace($suchmuster,$ersetzung,$_GET['Einheit']);
+		
 		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		// set the PDO error mode to exception
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "INSERT INTO artikel (Artikelnummer, beschreibung, internebezeichnung, bestand, meldebestand, lagerort, preis, einheit) VALUES ('".$_GET['Artikelnummer']."', '".preg_replace($suchmuster,$ersetzung,$_GET['Beschreibung'])."', '".preg_replace($suchmuster,$ersetzung,$_GET['Intern'])."', '".$_GET['Bestand']."','".$_GET['Meldebestand']."', '".preg_replace($suchmuster,$ersetzung,$_GET['Lagerort'])."','".$_GET['Preis']."','".preg_replace($suchmuster,$ersetzung,$_GET['Einheit'])."')";
+		$sql = "INSERT INTO artikel (Artikelnummer, beschreibung, internebezeichnung, bestand, meldebestand, lagerort, preis, einheit) VALUES ('".$_GET['Artikelnummer']."', '".$newBeschreibung."', '".$newIntern."', '".$_GET['Bestand']."','".$_GET['Meldebestand']."', '".$newLagerort."','".$_GET['Preis']."','".$newEinheit."')";
 		// use exec() because no results are returned
 		$conn->exec($sql);
 		echo "New record created successfully";

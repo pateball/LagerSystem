@@ -3,7 +3,6 @@
 		<title>artikelsuche</title>
 	</head>
 	<?php include ("nav.php"); ?>
-	<?php include ("nav.php"); ?>	
 	<body>
 	<?php
 	require_once 'dbconfig.php';
@@ -138,33 +137,33 @@
                                           	<div class="modal-body">
                                             	
                                             	<?php
+												
 												$Artikelnummer = $row['Artikelnummer'];
 												$end = "gif";
 										
-													if ( $_FILES['uploaddatei']['name']  <> "" )
-													{
-														$zugelassenedateitypen = array("image/png", "image/jpeg", "image/gif");
+													if ( $_FILES['uploaddatei']['name']  <> "" ){
+														$zugelassenedateitypen = array("image/png", "image/jpeg", "image/gif", "image/jpg");
 													 
-														if ( ! in_array( $_FILES['uploaddatei']['type'] , $zugelassenedateitypen ))
-														{
+														if ( ! in_array( $_FILES['uploaddatei']['type'] , $zugelassenedateitypen )){
 															echo "<p>Dateitype ist NICHT zugelassen</p>";
 														}
-														else
-														{
+														else{
 															move_uploaded_file (
 																 $_FILES['uploaddatei']['tmp_name'] ,
-																 'bilder/'.$Artikelnummer.'.'.$end );
+																 'bilder/'.$Artikelnummer.'.'.$end 
+															);
 													 
 															echo "<p>Hochladen war erfolgreich: ";
 															echo '<a href="bilder/'.$Artikelnummer.'.'.$end.'">';
 															echo 'bilder/'.$Artikelnummer.'.'.$end;
 															echo '</a>';
 															$pic = 'bilder/'.$Artikelnummer.'.'.$end;
-															$query = "INSERT INTO artikel(bilder) VALUES('$pic')";
-															$res = mysql_query($query);
+															//$query = "INSERT INTO artikel WHERE Artikelnummer = "'.$Artikelnummer.'" VALUES('$pic')";
+															//$res = mysql_query($query);
 														}
 													}
 													?>
+													
 										 
 												<form name="uploadformular" enctype="multipart/form-data" action="artikelseite.php?artikel=<?php echo $row['Id']; ?>" method="post" >
 												Datei: <input type="file" name="uploaddatei" size="60" maxlength="255" >
