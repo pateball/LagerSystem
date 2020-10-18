@@ -35,36 +35,36 @@
 <?php
 
 $suchmuster = array();
-$suchmuster[0] = '/"/';
-$suchmuster[1] = '/§/';
-$suchmuster[2] = '/$/';
-$suchmuster[3] = '/%/';
-$suchmuster[4] = '/&/';
-$suchmuster[5] = '///';
-$suchmuster[6] = '/(/';
-$suchmuster[7] = '/)/';
-$suchmuster[8] = '/=/';
-$suchmuster[9] = '/?/';
-$suchmuster[10] = '/ß/';
-$suchmuster[11] = '/{/';
-$suchmuster[12] = '/}/';
-$suchmuster[13] = '/[/';
-$suchmuster[14] = '/]/';
-$suchmuster[15] = '/+/';
-$suchmuster[16] = '/*/';
-$suchmuster[17] = '/#/';
-$suchmuster[18] = "/'/";
-$suchmuster[19] = '/-/';
-$suchmuster[20] = '/_/';
-$suchmuster[21] = '/:/';
-$suchmuster[22] = '/;/';
-$suchmuster[23] = '/,/';
-$suchmuster[24] = '/€/';
-$suchmuster[25] = '/@/';
+/*$suchmuster[0] = '"';
+$suchmuster[1] = '§';
+$suchmuster[2] = '$';
+$suchmuster[3] = '%';
+$suchmuster[4] = '&';
+$suchmuster[5] = '/';
+$suchmuster[6] = '(';
+$suchmuster[7] = ')';
+$suchmuster[8] = '=';
+$suchmuster[9] = '?';
+$suchmuster[10] = 'ß';
+$suchmuster[11] = '{';
+$suchmuster[12] = '}';
+$suchmuster[13] = '[';
+$suchmuster[14] = ']';
+$suchmuster[15] = '+';
+$suchmuster[16] = '*';
+$suchmuster[17] = '#';
+$suchmuster[18] = "'";
+$suchmuster[19] = '-';
+$suchmuster[20] = '_';
+$suchmuster[21] = ':';
+$suchmuster[22] = ';';
+$suchmuster[23] = ',';
+$suchmuster[24] = '€';
+$suchmuster[25] = '@';*/
 
 
 $ersetzung = array();
-$ersetzung[0] = '&quot;';
+/*$ersetzung[0] = '&quot;';
 $ersetzung[1] = '&sect;';
 $ersetzung[2] = '&dollar;';
 $ersetzung[3] = '&percnt;';
@@ -89,7 +89,7 @@ $ersetzung[21] = '&colon;';
 $ersetzung[22] = '&semi;';
 $ersetzung[23] = '&comma;';
 $ersetzung[24] = '&euro;';
-$ersetzung[25] = '&commat;';
+$ersetzung[25] = '&commat;';*/
 
 
 

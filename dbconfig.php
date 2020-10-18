@@ -3,7 +3,7 @@
 	
 	$host = "localhost";
 	$user = "lager";
-	$pass = "zeAAL5a8XjLx2RXX";
+	$pass = "";
 	$name = "lager";
 	
 	//do not edit this
