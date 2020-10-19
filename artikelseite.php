@@ -30,16 +30,18 @@
 								<input type="text" class="form-control" disabled value="<?php echo $row['beschreibung']; ?>" aria-describedby="einfaches-addon1">
 							</div>
 							<div class="ud_box">
-								<form id="ud_form">
+								<form id="ud_form" class="forms1">
 									<div class="checkbox">
 										<label>
 											<input name="SAP" type="checkbox" <?php if($row['SAPsperre'] == 1){echo "checked";} ?>>
 												SAP Sperre
 										</label>
 										<input name="Id" type="hidden" value="<?php echo $row['Id']; ?>" required>
+										<input name="art" type="hidden" value="1" required>
+										<input name="art2" type="hidden" value="" required>	
 										<input class="btn btn-default" type="submit" value="Aktualisieren">
 									</div>
-									<div class="ud_box" id="ud_output"></div>
+									<div class="ud_box" id="ud_output1"></div>
 								</form>
 							</div>
 						</div>
@@ -51,10 +53,28 @@
 					<div class="panel panel-default">
 						<div class="panel-heading"><h4>Interne Beschreibung</h4></div>
 						<div class="panel-body">
-							<div class="input-group">
-								<span class="input-group-addon" id="einfaches-addon1">Interne Beschreibung</span>
-								<input type="text" class="form-control" disabled value="<?php echo $row['internebezeichnung']; ?>" aria-describedby="einfaches-addon1">
+							
+							
+							
+							
+							<div class="ud_box">
+								<form id="ud_form" class="forms3">
+									<div class="input-group">
+										<span class="input-group-addon" id="einfaches-addon1">Interne Beschreibung</span>
+										<input type="text" class="form-control" name="internebezeichnung" value="<?php echo $row['internebezeichnung']; ?>" aria-describedby="einfaches-addon1">
+									</div>
+									<input name="Id" type="hidden" value="<?php echo $row['Id']; ?>" required>
+									<input name="art" type="hidden" value="1" required>	
+									<input name="art2" type="hidden" value="1" required>										
+									<input class="btn btn-default" type="submit" value="Aktualisieren">
+									<div class="ud_box" id="ud_output3"></div>
+								</form>
 							</div>
+							
+							
+							
+							
+							
 						</div>
 					</div>
 				</div>
@@ -75,9 +95,18 @@
 					<div class="panel panel-default">
 						<div class="panel-heading"><h4>Bestand</h4></div>
 						<div class="panel-body">
-							<div class="input-group">
-								<span class="input-group-addon" id="einfaches-addon1">Bestand</span>
-								<input type="text" class="form-control" disabled value="<?php echo $row['bestand']; ?>" aria-describedby="einfaches-addon1">
+							<div class="ud_box">
+								<form id="ud_form" class="forms2">
+									<div class="input-group">
+										<span class="input-group-addon" id="einfaches-addon1">Bestand</span>
+										<input name="bestand" type="text" class="form-control" value="<?php echo $row['bestand']; ?>" aria-describedby="einfaches-addon1">
+									</div>
+									<input name="Id" type="hidden" value="<?php echo $row['Id']; ?>" required>
+									<input name="art" type="hidden" value="" required>			
+									<input name="art2" type="hidden" value="" required>										
+									<input class="btn btn-default" type="submit" value="Aktualisieren">
+									<div class="ud_box" id="ud_output2"></div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -86,10 +115,28 @@
 					<div class="panel panel-default">
 						<div class="panel-heading"><h4>Meldebestand</h4></div>
 						<div class="panel-body">
-							<div class="input-group">
-								<span class="input-group-addon" id="einfaches-addon1">Meldebestand</span>
-								<input type="text" class="form-control" disabled value="<?php echo $row['meldebestand']; ?>" aria-describedby="einfaches-addon1">
+										
+
+
+
+										
+							
+							<div class="ud_box">
+								<form id="ud_form" class="forms4">
+									<div class="input-group">
+										<span class="input-group-addon" id="einfaches-addon1">Meldebestand</span>
+										<input type="text" name="meldebestand" class="form-control" value="<?php echo $row['meldebestand']; ?>" aria-describedby="einfaches-addon1">
+									</div>
+									<input name="Id" type="hidden" value="<?php echo $row['Id']; ?>" required>
+									<input name="art" type="hidden" value="" required>			
+									<input name="art2" type="hidden" value="1" required>										
+									<input class="btn btn-default" type="submit" value="Aktualisieren">
+									<div class="ud_box" id="ud_output4"></div>
+								</form>
 							</div>
+							
+							
+							
 						</div>
 					</div>
 				</div>
@@ -120,7 +167,7 @@
 
 
 
-<br>
+							<br>
 							<!-- Button, der das Modal aufruft -->
                                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#meinModal">
                                       Bild ändern
@@ -197,14 +244,50 @@
 		<?php } ?>
 	</body>
 	<script>
-		$('#ud_form').submit(function(event){
+		$('.forms1').submit(function(event){
 			event.preventDefault();
 			$.ajax({
 				type: 'GET',
 				url: 'artikelseite_inserte.php',
 				data: $(this).serialize(),
 				success: function(data){
-					$('#ud_output').html(data);
+					//$('#ud_output1').html(data); //Debug
+				}
+			});
+			//$('#ud_form')[0].reset();
+		});
+		$('.forms2').submit(function(event){
+			event.preventDefault();
+			$.ajax({
+				type: 'GET',
+				url: 'artikelseite_inserte.php',
+				data: $(this).serialize(),
+				success: function(data){
+					//$('#ud_output2').html(data); //Debug
+				}
+			});
+			//$('#ud_form')[0].reset();
+		});
+		$('.forms3').submit(function(event){
+			event.preventDefault();
+			$.ajax({
+				type: 'GET',
+				url: 'artikelseite_inserte.php',
+				data: $(this).serialize(),
+				success: function(data){
+					//$('#ud_output3').html(data); //Debug
+				}
+			});
+			//$('#ud_form')[0].reset();
+		});
+		$('.forms4').submit(function(event){
+			event.preventDefault();
+			$.ajax({
+				type: 'GET',
+				url: 'artikelseite_inserte.php',
+				data: $(this).serialize(),
+				success: function(data){
+					//$('#ud_output4').html(data); //Debug
 				}
 			});
 			//$('#ud_form')[0].reset();
