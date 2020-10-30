@@ -154,6 +154,10 @@
 								<span class="input-group-addon" id="einfaches-addon1">Einheit</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['einheit']; ?>" aria-describedby="einfaches-addon1">
 							</div>
+							<div class="input-group">
+								<span class="input-group-addon" id="einfaches-addon1">Bestandswert</span>
+								<input type="text" class="form-control" disabled value="<?php echo $row['bestand'] * $row['preis']; echo $row['Einheit']; ?>" aria-describedby="einfaches-addon1">
+							</div>
 						</div>
 					</div>
 				</div>
