@@ -19,7 +19,7 @@
 					<a class="btn btn-default" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" role="button">Back</a>
 					<div class="panel panel-default">
 						<div class="panel-heading" ><h4>Artikel Stammdaten</h4></div>
-						<div class="panel-body">
+						<div class="panel-body" id="panelBody">
 							<div class="input-group">
 								<span class="input-group-addon" id="einfaches-addon1">Artikelnummer</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['Artikelnummer']; ?>" aria-describedby="einfaches-addon1">
