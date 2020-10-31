@@ -18,7 +18,7 @@
 				<div class="col-md-offset-2 col-md-8">
 					<a class="btn btn-default" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" role="button">Back</a>
 					<div class="panel panel-default">
-						<div class="panel-heading"><h4>Artikel Stammdaten</h4></div>
+						<div class="panel-heading" ><h4>Artikel Stammdaten</h4></div>
 						<div class="panel-body">
 							<div class="input-group">
 								<span class="input-group-addon" id="einfaches-addon1">Artikelnummer</span>

@@ -1,7 +1,7 @@
-<html>
 	<head>
 		<title>Lager | Index</title>
 	</head>
+<html>
 	<?php include ("nav.php"); ?>
 	<body>
 		<div class="container-fluid">

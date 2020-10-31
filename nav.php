@@ -10,6 +10,7 @@ body {
 	color: #fff;
 }
 .table-striped > tbody > tr:nth-of-type(2n+1) {
+    id="backgroundColorOne"; 
     background-color: #3f4143;
 }
 .table-striped > tbody > tr:nth-of-type(2n) {
@@ -24,7 +25,7 @@ body {
   background-color: #3f4143;
   border-color: #000;
 }
-.panel-default > .panel-body {
+.panel-default > .panel-body-dark {
   color: #fff;
   background-color: #2e3339;
   border-color: #000;
@@ -33,10 +34,10 @@ body {
 
 	
 	
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top" id="headArtikelStammdaten">
+  <div class="container-fluid" id="headArtikelStammdaten">
     <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
-    <div class="navbar-header">
+    <div class="navbar-header" id="headArtikelStammdaten">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Navigation ein-/ausblenden</span>
         <span class="icon-bar"></span>
