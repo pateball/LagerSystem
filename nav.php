@@ -9,18 +9,18 @@ body {
 	background-color: #2e3339;
 	color: #fff;
 }
-.table-striped > tbody > tr:nth-of-type(2n+1) {
+.table-striped > tbody > tr:nth-of-type(2n+1)-dark {
     id="backgroundColorOne"; 
     background-color: #3f4143;
 }
-.table-striped > tbody > tr:nth-of-type(2n) {
+.table-striped > tbody > tr:nth-of-type(2n)-dark {
     background-color: #2e3339;
 }
-.navbar-default {
+.navbar-default-dark {
   background-color: #3f4143;
   border-color: #000;
 }
-.panel-default > .panel-heading {
+.panel-default > .panel-heading-dark {
   color: #fff;
   background-color: #3f4143;
   border-color: #000;
