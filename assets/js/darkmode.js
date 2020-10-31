@@ -12,7 +12,7 @@ function onButtonClick() {
     alert('Nightmode aktiviert');
     //document.body.style.color = "black";
     //document.getElementById('headArtikelStammdaten').style.color ="black";
-    
-    setPanelBody.panel-body = "panel-body-darkmode";
+    //PanelBody.panel-body == "panel-body-dark";
+    PanelBody.setAttribute('class', 'panel-body-dark');
 }
 
