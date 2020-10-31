@@ -2,6 +2,35 @@
 
 <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css"  />
 <link href="icon.ico" rel="shortcut icon"></link>	
+
+
+<style>
+body {
+	background-color: #2e3339;
+	color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #3f4143;
+}
+.table-striped > tbody > tr:nth-of-type(2n) {
+    background-color: #2e3339;
+}
+.navbar-default {
+  background-color: #3f4143;
+  border-color: #000;
+}
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #3f4143;
+  border-color: #000;
+}
+.panel-default > .panel-body {
+  color: #fff;
+  background-color: #2e3339;
+  border-color: #000;
+}
+</style>
+
 	
 	
 <nav class="navbar navbar-default navbar-fixed-top">
