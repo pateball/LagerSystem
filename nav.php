@@ -64,10 +64,13 @@ body {
 			<input type="hidden" name="add" type="text" class="form-control" placeholder="" value="">
 						
         </div>
-        <button type="submit" class="btn btn-default">Los</button>
+
+      <button type="submit" class="btn btn-default">Los</button>
+
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
+        <li><a href="#">Abmelden</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -75,7 +78,9 @@ body {
             <li><a href="#">Andere Aktion</a></li>
             <li><a href="#">Irgendwas anderes</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Abgetrennter Link</a></li>
+            <li>
+            </li>
+              <button type="submit" id="NightmodeButton" onclick="onButtonClick()">Nightmode</button>
           </ul>
         </li>
       </ul>
@@ -84,3 +89,4 @@ body {
 </nav>
 <script src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/darkmode.js"></script>
