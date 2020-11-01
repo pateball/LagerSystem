@@ -17,9 +17,9 @@
 			<div class="row">
 				<div class="col-md-offset-2 col-md-8">
 					<a class="btn btn-default" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" role="button">Back</a>
-					<div class="panel panel-default">
+					<div class="panel panel-default" id="panelBody">
 						<div class="panel-heading" ><h4>Artikel Stammdaten</h4></div>
-						<div class="panel-body" id="panelBody">
+						<div class="panel-body">
 							<div class="input-group">
 								<span class="input-group-addon" id="einfaches-addon1">Artikelnummer</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['Artikelnummer']; ?>" aria-describedby="einfaches-addon1">
@@ -50,7 +50,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-4">
-					<div class="panel panel-default">
+					<div class="panel panel-default" id='interneBeschreibung'>
 						<div class="panel-heading"><h4>Interne Beschreibung</h4></div>
 						<div class="panel-body">
 							
@@ -79,7 +79,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="panel panel-default">
+					<div class="panel panel-default" id='lagerorteBox'>
 						<div class="panel-heading"><h4>Lagerorte</h4></div>
 						<div class="panel-body">
 							<div class="input-group">
@@ -92,7 +92,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-4">
-					<div class="panel panel-default">
+					<div class="panel panel-default" id='bestandBox'>
 						<div class="panel-heading"><h4>Bestand</h4></div>
 						<div class="panel-body">
 							<div class="ud_box">
@@ -112,7 +112,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="panel panel-default">
+					<div class="panel panel-default" id='meldebestandBox'>
 						<div class="panel-heading"><h4>Meldebestand</h4></div>
 						<div class="panel-body">
 										
@@ -143,7 +143,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-4">
-					<div class="panel panel-default">
+					<div class="panel panel-default" id='preisBox'>
 						<div class="panel-heading"><h4>Preis</h4></div>
 						<div class="panel-body">
 							<div class="input-group">
@@ -162,7 +162,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="panel panel-default">
+					<div class="panel panel-default" id='produktBildBox'>
 						<div class="panel-heading"><h4>Produkt Bild</h4></div>
 						<div class="panel-body">
 							 <a href="bilder/<?php echo $row['Artikelnummer']; ?>.gif"><img src="bilder/<?php echo $row['Artikelnummer']; ?>.gif" alt="kein Bild vorhanden" width="100%" height="auto" ></a>

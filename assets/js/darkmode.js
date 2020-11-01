@@ -3,16 +3,27 @@ let NightmodeHead;
 let PanelBody;
 
 onload = (event) => {
-    Nightmode = document.getElementById('NightmodeButton');
-    NightmodeHead = document.getElementById('headArtikelStammdaten');
     PanelBody = document.getElementById('panelBody');
+    InterneBeschreibungBox = document.getElementById('interneBeschreibung');
+    LagerorteBox = document.getElementById('lagerorteBox');
+    BestandBox = document.getElementById('bestandBox');
+    MeldebestandBox = document.getElementById('meldebestandBox');
+    PreisBox = document.getElementById('preisBox');
+    ProduktBildBox = document.getElementById('produktBildBox');
 }
 
-function onButtonClick() {
+function onDarkButtonClick() {
+    var p = 'panel-body-dark';
+    var c = 'class';
+    
+    PanelBody.setAttribute(c, p);
+    InterneBeschreibungBox.setAttribute(c, p);
+    LagerorteBox.setAttribute(c, p);
+    BestandBox.setAttribute(c, p);
+    MeldebestandBox.setAttribute(c, p);
+    PreisBox.setAttribute(c, p);
+    ProduktBildBox.setAttribute(c, p);
+    //document.getElementById('panelBody').setAttribute('class', 'panel-body-dark');
+
     alert('Nightmode aktiviert');
-    //document.body.style.color = "black";
-    //document.getElementById('headArtikelStammdaten').style.color ="black";
-    //PanelBody.panel-body == "panel-body-dark";
-    PanelBody.setAttribute('class', 'panel-body-dark');
 }
-
