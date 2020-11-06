@@ -1,3 +1,5 @@
+"use Strict";
+
 let NightmodeButton;
 let NightmodeHead;
 let PanelBody;
