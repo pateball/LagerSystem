@@ -14,8 +14,8 @@ onload = (event) => {
 }
 
 let onDarkButtonClick = function() {
-    var p = 'panel-body-dark';
-    var c = 'class';
+    let p = 'panel-body-dark';
+    let c = 'class';
     
     PanelBody.setAttribute(c, p);
     InterneBeschreibungBox.setAttribute(c, p);
