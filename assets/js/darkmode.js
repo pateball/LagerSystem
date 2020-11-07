@@ -2,19 +2,18 @@
 
 let NightmodeButton;
 let NightmodeHead;
-let PanelBody;
 
 onload = (event) => {
-    PanelBody = document.getElementById('panelBody');
-    InterneBeschreibungBox = document.getElementById('interneBeschreibung');
-    LagerorteBox = document.getElementById('lagerorteBox');
-    BestandBox = document.getElementById('bestandBox');
-    MeldebestandBox = document.getElementById('meldebestandBox');
-    PreisBox = document.getElementById('preisBox');
-    ProduktBildBox = document.getElementById('produktBildBox');
+    let PanelBody = document.getElementById('panelBody');
+    let InterneBeschreibungBox = document.getElementById('interneBeschreibung');
+    let LagerorteBox = document.getElementById('lagerorteBox');
+    let BestandBox = document.getElementById('bestandBox');
+    let MeldebestandBox = document.getElementById('meldebestandBox');
+    let PreisBox = document.getElementById('preisBox');
+    let ProduktBildBox = document.getElementById('produktBildBox');
 }
 
-function onDarkButtonClick() {
+let onDarkButtonClick = function() {
     var p = 'panel-body-dark';
     var c = 'class';
     
