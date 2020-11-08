@@ -79,9 +79,7 @@ body {
             <li><a href="#">Andere Aktion</a></li>
             <li><a href="#">Irgendwas anderes</a></li>
             <li role="separator" class="divider"></li>
-            <li>
-            </li>
-              <button class="btn-group btn-group-xs" type="submit" id="darkButton" onclick="onDarkButtonClick()">Nightmode</button>
+            <li><a href="#" id="darkButton">Darkmode</a></li>
           </ul>
         </li>
       </ul>
