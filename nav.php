@@ -7,7 +7,7 @@
 <style>
 body-dark {
 	background-color: #2e3339;
-	color: #fff;
+	color: #000;
 }
 .table-striped > tbody > tr:nth-of-type(2n+1)-dark {
     id="backgroundColorOne"; 
