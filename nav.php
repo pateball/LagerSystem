@@ -5,7 +5,7 @@
 
 
 <style>
-body {
+body-dark {
 	background-color: #2e3339;
 	color: #fff;
 }
