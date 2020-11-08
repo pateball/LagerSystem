@@ -17,9 +17,9 @@
 			<div class="row">
 				<div class="col-md-offset-2 col-md-8">
 					<a class="btn btn-default" href="<?php echo $_SERVER['HTTP_REFERER']; ?>" role="button">Back</a>
-					<div class="panel panel-default" id="panelBody">
-						<div class="panel-heading" ><h4>Artikel Stammdaten</h4></div>
-						<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="artikelStammdatenPanelHeading"><h4>Artikel Stammdaten</h4></div>
+						<div class="panel-body" id="artikelStammdatenPanelBody">
 							<div class="input-group">
 								<span class="input-group-addon" id="einfaches-addon1">Artikelnummer</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['Artikelnummer']; ?>" aria-describedby="einfaches-addon1">
@@ -50,9 +50,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-4">
-					<div class="panel panel-default" id='interneBeschreibung'>
-						<div class="panel-heading"><h4>Interne Beschreibung</h4></div>
-						<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="interneBeschreibungHeading"><h4>Interne Beschreibung</h4></div>
+						<div class="panel-body" id="interneBeschreibungBody">
 							
 							
 							
@@ -79,9 +79,9 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="panel panel-default" id='lagerorteBox'>
-						<div class="panel-heading"><h4>Lagerorte</h4></div>
-						<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="lagerorteHeading"><h4>Lagerorte</h4></div>
+						<div class="panel-body" id="lagerorteBody">
 							<div class="input-group">
 								<span class="input-group-addon" id="einfaches-addon1">Lagerorte</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['lagerort']; ?> uvm." aria-describedby="einfaches-addon1">
@@ -92,9 +92,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-4">
-					<div class="panel panel-default" id='bestandBox'>
-						<div class="panel-heading"><h4>Bestand</h4></div>
-						<div class="panel-body">
+					<div class="panel panel-default" >
+						<div class="panel-heading" id="bestandHeading"><h4>Bestand</h4></div>
+						<div class="panel-body" id="bestandBody">
 							<div class="ud_box">
 								<form id="ud_form" class="forms2">
 									<div class="input-group">
@@ -112,9 +112,9 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="panel panel-default" id='meldebestandBox'>
-						<div class="panel-heading"><h4>Meldebestand</h4></div>
-						<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="meldebestandHeading"><h4>Meldebestand</h4></div>
+						<div class="panel-body" id="meldebestandBody">
 										
 
 
@@ -143,9 +143,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-4">
-					<div class="panel panel-default" id='preisBox'>
-						<div class="panel-heading"><h4>Preis</h4></div>
-						<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="preisHeading"><h4>Preis</h4></div>
+						<div class="panel-body" id="preisBody">
 							<div class="input-group">
 								<span class="input-group-addon" id="einfaches-addon1">Preis</span>
 								<input type="text" class="form-control" disabled value="<?php echo $row['preis']; ?>" aria-describedby="einfaches-addon1">
@@ -162,9 +162,9 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="panel panel-default" id='produktBildBox'>
-						<div class="panel-heading"><h4>Produkt Bild</h4></div>
-						<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="produktBildHeading"><h4>Produkt Bild</h4></div>
+						<div class="panel-body" id="produktBildBody">
 							 <a href="bilder/<?php echo $row['Artikelnummer']; ?>.gif"><img src="bilder/<?php echo $row['Artikelnummer']; ?>.gif" alt="kein Bild vorhanden" width="100%" height="auto" ></a>
 
 

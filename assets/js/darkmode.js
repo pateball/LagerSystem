@@ -1,26 +1,54 @@
 "use Strict";
 
 window.addEventListener("load", function() {
-    let PanelBody = document.getElementById('panelBody');
-    let InterneBeschreibungBox = document.getElementById('interneBeschreibung');
-    let LagerorteBox = document.getElementById('lagerorteBox');
-    let BestandBox = document.getElementById('bestandBox');
-    let MeldebestandBox = document.getElementById('meldebestandBox');
-    let PreisBox = document.getElementById('preisBox');
-    let ProduktBildBox = document.getElementById('produktBildBox');
-    let p = 'panel-body-dark';
-    let c = 'class';
+    let artikelStammdatenPanelHeading = document.getElementById("artikelStammdatenPanelHeading");
+    let artikelStammdatenPanelBody = document.getElementById('artikelStammdatenPanelBody');
 
+    let interneBeschreibungHeading = document.getElementById('interneBeschreibungHeading');
+    let interneBeschreibungBody = document.getElementById('interneBeschreibungBody');
+
+    let lagerorteHeading = document.getElementById('lagerorteHeading');
+    let lagerorteBody = document.getElementById('lagerorteBody');
+
+    let bestandHeading = document.getElementById('bestandHeading');
+    let bestandBody = document.getElementById('bestandBody');
+
+    let meldebestandHeading = document.getElementById('meldebestandHeading');
+    let meldebestandBody = document.getElementById('meldebestandBody');
+
+    let preisHeading = document.getElementById('preisHeading');
+    let preisBody = document.getElementById('preisBody');
+
+    let produktBildHeading = document.getElementById('produktBildHeading');
+    let produktBildBody = document.getElementById('produktBildBody');
+    
     let DarkButton = document.getElementById("darkButton");
 
+    let Body = 'panel-body-dark';
+    let Headline = 'panel-heading-dark';
+    let c = 'class';
+
     DarkButton.addEventListener("click", function() {
-        PanelBody.setAttribute(c, p);
-        InterneBeschreibungBox.setAttribute(c, p);
-        LagerorteBox.setAttribute(c, p);
-        BestandBox.setAttribute(c, p);
-        MeldebestandBox.setAttribute(c, p);
-        PreisBox.setAttribute(c, p);
-        ProduktBildBox.setAttribute(c, p);
+        artikelStammdatenPanelHeading.setAttribute(c, Headline);
+        artikelStammdatenPanelBody.setAttribute(c, Body);
+
+        interneBeschreibungHeading.setAttribute(c, Headline);
+        interneBeschreibungBody.setAttribute(c, Body);
+
+        lagerorteHeading.setAttribute(c, Headline);
+        lagerorteBody.setAttribute(c, Body);
+
+        bestandHeading.setAttribute(c, Headline);
+        bestandBody.setAttribute(c, Body);
+        
+        meldebestandHeading.setAttribute(c, Headline);
+        meldebestandBody.setAttribute(c, Body);
+        
+        preisHeading.setAttribute(c, Headline);
+        preisBody.setAttribute(c, Body);
+        
+        produktBildHeading.setAttribute(c, Headline);
+        produktBildBody.setAttribute(c, Body);
         //document.getElementById('panelBody').setAttribute('class', 'panel-body-dark');
 
 
