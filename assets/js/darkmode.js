@@ -26,33 +26,42 @@ window.addEventListener("load", function() {
 
     let Body = 'panel-body-dark';
     let Headline = 'panel-heading-dark';
-    let c = 'class';
+
+    let dark = 0;
 
     DarkButton.addEventListener("click", function() {
-        artikelStammdatenPanelHeading.setAttribute(c, Headline);
-        artikelStammdatenPanelBody.setAttribute(c, Body);
+        artikelStammdatenPanelHeading.classList.toggle(Headline);
+        artikelStammdatenPanelBody.classList.toggle(Body);
 
-        interneBeschreibungHeading.setAttribute(c, Headline);
-        interneBeschreibungBody.setAttribute(c, Body);
+        interneBeschreibungHeading.classList.toggle(Headline);
+        interneBeschreibungBody.classList.toggle(Body);
 
-        lagerorteHeading.setAttribute(c, Headline);
-        lagerorteBody.setAttribute(c, Body);
+        lagerorteHeading.classList.toggle(Headline);
+        lagerorteBody.classList.toggle(Body);
 
-        bestandHeading.setAttribute(c, Headline);
-        bestandBody.setAttribute(c, Body);
+        bestandHeading.classList.toggle(Headline);
+        bestandBody.classList.toggle(Body);
         
-        meldebestandHeading.setAttribute(c, Headline);
-        meldebestandBody.setAttribute(c, Body);
+        meldebestandHeading.classList.toggle(Headline);
+        meldebestandBody.classList.toggle(Body);
         
-        preisHeading.setAttribute(c, Headline);
-        preisBody.setAttribute(c, Body);
+        preisHeading.classList.toggle(Headline);
+        preisBody.classList.toggle(Body);
         
-        produktBildHeading.setAttribute(c, Headline);
-        produktBildBody.setAttribute(c, Body);
+        produktBildHeading.classList.toggle(Headline);
+        produktBildBody.classList.toggle(Body);
         //document.getElementById('panelBody').setAttribute('class', 'panel-body-dark');
 
+        if(dark < 1) {
+            DarkButton.innerText = 'Daymode';
+            dark = 1;
+            alert('Nightmode aktiviert');
+        } else {
+            DarkButton.innerText = 'Darkmode';
+            dark = 0;
+            alert('Daymode aktiviert');
+        }
 
-        alert('Nightmode aktiviert');
     }, false);
 
 }, false);
