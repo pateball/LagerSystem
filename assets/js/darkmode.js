@@ -22,11 +22,13 @@ window.addEventListener("load", function() {
     let produktBildHeading = document.getElementById('produktBildHeading');
     let produktBildBody = document.getElementById('produktBildBody');
     
+    let BodyArtikelseite = document.getElementById('bodyArtikelseite');
+    let HeadArtikelStammdaten = document.getElementById('headArtikelStammdaten');
+
     let DarkButton = document.getElementById("darkButton");
 
     let Body = 'panel-body-dark';
     let Headline = 'panel-heading-dark';
-
     let dark = 0;
 
     DarkButton.addEventListener("click", function() {
@@ -50,14 +52,20 @@ window.addEventListener("load", function() {
         
         produktBildHeading.classList.toggle(Headline);
         produktBildBody.classList.toggle(Body);
+
+        BodyArtikelseite.classList.toggle('body-dark');
         //document.getElementById('panelBody').setAttribute('class', 'panel-body-dark');
 
         if(dark < 1) {
             DarkButton.innerText = 'Daymode';
+            HeadArtikelStammdaten.classList.add('navbar-dark');
+            HeadArtikelStammdaten.classList.remove('navbar-default');
             dark = 1;
             alert('Nightmode aktiviert');
         } else {
             DarkButton.innerText = 'Darkmode';
+            HeadArtikelStammdaten.classList.add('navbar-default');
+            HeadArtikelStammdaten.classList.remove('navbar-dark');
             dark = 0;
             alert('Daymode aktiviert');
         }

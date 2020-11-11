@@ -5,7 +5,7 @@
 
 
 <style>
-body-dark {
+.body-dark {
 	background-color: #2e3339;
 	color: #000;
 }
@@ -34,10 +34,10 @@ body-dark {
 
 	
 	
-<nav class="navbar navbar-default navbar-fixed-top" id="headArtikelStammdaten">
-  <div class="container-fluid" id="headArtikelStammdaten">
+<nav class="navbar-default" id="headArtikelStammdaten"> <!--class navbar-dark-->
+  <div class="container-fluid">
     <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
-    <div class="navbar-header" id="headArtikelStammdaten">
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Navigation ein-/ausblenden</span>
         <span class="icon-bar"></span>

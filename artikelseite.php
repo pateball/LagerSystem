@@ -3,7 +3,7 @@
 		<title>artikelsuche</title>
 	</head>
 	<?php include ("nav.php"); ?>
-	<body>
+	<body class="" id="bodyArtikelseite">
 	<?php
 	require_once 'dbconfig.php';
 	$query = "SELECT * FROM artikel WHERE Id = ".$_GET['artikel'];
